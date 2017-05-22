@@ -5,4 +5,3 @@ if($a){
 }else{
     echo XX;
 }
-....
