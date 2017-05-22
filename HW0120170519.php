@@ -1,6 +1,6 @@
 <?php
 
-
+ddddd;
 //if (isset($_GET['xx'])){
 //    $x = $_GET['xx'];
 //    $y = $_GET['yy'];
