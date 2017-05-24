@@ -10,6 +10,7 @@ for($i=51; $i>=0;$i--) {
     $x=$a[$temp];
     $a[$temp]=$a[$i];
     $a[$i]=$x;
+//    temp的key傳給暫存變數x，再將$i的key傳給$temp的key.....
 }
 
 foreach ($a as $key => $value)

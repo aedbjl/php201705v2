@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 2017/5/23
- * Time: 下午 03:32
- */
+include("functionapi.php");
+$v = fx(4);
+//echo $v;
+say(brad, me);
+sayhello(james, mes);
+
