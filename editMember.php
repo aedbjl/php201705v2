@@ -2,7 +2,7 @@
   session_start();
 if(!isset($_GET['editid'])) header('Location:20170531 A&P.php');
       $editid=$_GET['editid'];
-
+      $_SESSION['id']=$editid;
      $sql="select * from member where id={$editid}";
       $db=@ new mysqli('127.0.0.1','root','root','iii');
       $rs=$db->query($sql);
@@ -26,7 +26,7 @@ if(!isset($_GET['editid'])) header('Location:20170531 A&P.php');
         </tr>
         <tr>
             <th>name</th>
-            <td><input type="text" name="name" value="<?php echo $editObj->name; ?>"></td>
+            <td><input type="text" name="realname" value="<?php echo $editObj->realname; ?>"></td>
 
         </tr>
         <tr>

@@ -31,7 +31,7 @@ $rs= $db->query($sql);
              echo "<td>{$row->id}</td>>";
              echo "<td>{$row->account}</td>>";
              echo "<td>{$row->password}</td>>";
-             echo "<td>{$row->name}</td>>";
+             echo "<td>{$row->realname}</td>>";
              echo "<td><a href='?delid={$row->id}'>del</td>>";
              echo "<td><a href='editMember.php?editid={$row->id}'>edit</td>";
              echo "</tr>";
