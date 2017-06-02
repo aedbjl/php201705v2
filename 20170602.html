@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<script>
+
+
+    var xmlhttp;
+        if (window.XMLHttpRequest) {
+            // code for modern browsers
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for old IE browsers
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+
+
+
+    function test1() {
+
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "test.php", true);
+        xmlhttp.send();
+    }
+
+
+
+
+
+</script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<input type="button" onclick="test1()" value="click">
+
+<div id="demo"></div>
+
+</body>
+</html>

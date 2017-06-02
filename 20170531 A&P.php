@@ -15,7 +15,7 @@ $rs= $db->query($sql);
 ?>
 
 
-<a href="addMember.php">new</a>
+
 <table width="100%" border="2px">
     <tr>
 
@@ -28,11 +28,11 @@ $rs= $db->query($sql);
         <?php
          while ($row=$rs->fetch_object()){
              echo "<tr>";
-             echo "<td>{$row->id}</td>>";
-             echo "<td>{$row->account}</td>>";
-             echo "<td>{$row->password}</td>>";
-             echo "<td>{$row->realname}</td>>";
-             echo "<td><a href='?delid={$row->id}'>del</td>>";
+             echo "<td>{$row->id}</td>";
+             echo "<td>{$row->account}</td>";
+             echo "<td>{$row->password}</td>";
+             echo "<td>{$row->realname}</td>";
+             echo "<td><a href='?delid={$row->id}'>del</td>";
              echo "<td><a href='editMember.php?editid={$row->id}'>edit</td>";
              echo "</tr>";
 
@@ -42,3 +42,5 @@ $rs= $db->query($sql);
 
     </tr>
 </table>
+
+<a href="addMember.php">new</a>

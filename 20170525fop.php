@@ -37,7 +37,7 @@ $data=file("179.csv");
         $fileds=explode(',',$line);
         echo '<tr align="center">';
         foreach($fileds as $field){
-            echo '<td style="height:150px;width:200px align="center" valign="middle">'.$field.'</td>';
+            echo '<td style="height:150px;width:200px" align="center" valign="middle">'.$field.'</td>';
         }
         echo '</tr>';
     }

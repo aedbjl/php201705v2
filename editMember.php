@@ -11,7 +11,7 @@ if(!isset($_GET['editid'])) header('Location:20170531 A&P.php');
 
 ?>
 
-<form action="updateMember.php">
+<form action="updateMember123.php">
     <input type="hidden" name="id" value="<?php echo $editObj->id; ?>">
     <table>
         <tr>
