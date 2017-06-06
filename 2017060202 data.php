@@ -3,7 +3,7 @@
 include 'sql000.php';
 $pdo=new pdo($dsn,$user,$password,$opt);
 
-$sql="select * from member ";
+$sql="select * from member";
 
 $stmt=$pdo->prepare($sql);
 $stmt->execute();
@@ -16,5 +16,6 @@ while ($obj=$stmt->fetchObject()){
 }
 echo '</table>';
 
-
+//$obj=$stmt->fetchObject();
+//echo "{$obj->account}";
 
