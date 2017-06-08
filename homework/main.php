@@ -1,42 +1,66 @@
-<?php
-include 'sql000.php';
-$pdo=new pdo($dsn,$user,$password,$opt);
-
-$sql="select account from member where id";
-
-$stmt=$pdo->prepare($sql);
-$stmt->execute();
-?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 
 
 </head>
 <body>
 
+<script>
 
-        <?php
-        $goal=0;
-        while ($obj = $stmt->fetchObject()) {
+//setTimeout("time2()",1000);
+//
+//
+//    function time2() {
+//        var id = 2;
+//        test1(id);
+//    }
+//
+//    function test1(id) {
+//        $.post("123.php", {id:id}, function (data, status) {
+//            $("#123").html(data);
+//        })
+//    }
+//setTimeout("time()",5000);
+//
+//
+//    function time() {
+//        var id = 4;
+//        test2(id);
+//    }
+//
+//
+//function test2(id) {
+//    $.post("123.php", {id:id}, function (data, status) {
+//        $("#456").html(data);
+//    })
+//
+    function test(id) {
+        $.post("123.php", {id: id}, function (data, status) {
+            $("#123").html(data);
+        });
+    }
+            for (j=2;j<5;j++) {
+                var id = j;
+                setTimeout("test(id)", 3000)
+//                $(document).ready(function () {
+//                    setTimeout("test(id)", 3000)
+//                });
 
-            $rs = rand("$obj->account",10);
-            if ($rs <= "$obj->account") {
-                $goal += 1;
-            } else {
-                $goal += 0;
             }
 
-        }
-        ?>
 
 
+</script>
 <form>
+
     <table width="100%" border="3px">
         <tr>
-            <td><?php echo "$goal" ;?></td>
+            <td id="123"></td>
             <td></td>
             <td>5</td>
             <td>5</td>
