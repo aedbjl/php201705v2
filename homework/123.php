@@ -11,12 +11,14 @@ $stmt=$pdo->prepare($sql);
 $stmt->execute([$id]);
 
 $goal = 0;
-$obj = $stmt->fetchObject();
-$rs = rand(0, 10);
-if ($rs <= "$obj->account") {
-    $goal += 1;
-} else {
-    $goal += 0;
+while ($obj = $stmt->fetchObject()) {
+    $rs = rand(0, 10);
+    if ($rs <= "$obj->account") {
+        $goal = 5;
+    } else {
+        $goal = 0;
+    }
+
 }
 echo $goal;
 
